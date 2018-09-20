@@ -1,0 +1,167 @@
+p {
+  color: #222; }
+
+h1 {
+  font-family: 'Luckiest Guy', cursive;
+  color: #222;
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: .25rem; }
+
+#enter {
+  -webkit-transition: color 1s;
+  transition: color 1s; }
+
+#enter:hover {
+  color: red; }
+
+header {
+  margin-top: 3rem;
+  text-align: center; }
+  header #globe {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+  header .transform {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+
+#hideMe {
+  height: 900px; }
+
+#showMe {
+  display: none; }
+
+html {
+  font-size: 63%; }
+
+body {
+  font: 1.6rem/1.5 'Futura PT', Georgia, sans-serif;
+  margin: 0;
+  padding: 0 10%; }
+
+header {
+  margin-top: 3rem;
+  text-align: center;
+  margin-bottom: 3rem; }
+  header #globe {
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+  header .transform {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem; }
+  main article {
+    position: relative;
+    overflow: hidden; }
+    main article:hover ul {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px); }
+    main article ul {
+      opacity: 0;
+      list-style-type: none;
+      list-style-image: url("../images/user-icon.svg");
+      list-style-position: inside;
+      display: block;
+      position: absolute;
+      bottom: 0.7rem;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+      width: 100%;
+      margin: 0;
+      -webkit-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px); }
+      main article ul li:last-of-type {
+        list-style-image: url("../images/heart.svg"); }
+    main article img {
+      margin: 0 auto;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 400px; }
+
+footer {
+  text-align: center; }
+
+h1 {
+  margin-left: auto;
+  margin-right: auto; }
+
+#hideMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#author {
+  margin: 0;
+  display: inline;
+  padding: 2px; }
+
+#quote {
+  padding: 0; }
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  main {
+    grid-template-columns: 1fr 1fr; } }
+
+.sprite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 240px;
+  background: transparent url("../images/zombie_frame.png") 0 0 no-repeat;
+  -webkit-animation: walker 2s steps(16) infinite;
+          animation: walker 2s steps(16) infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-transition: color 2s;
+  transition: color 2s; }
+
+.sprite:hover {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  color: red; }
+
+@-webkit-keyframes walker {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 0 -3744px; } }
+
+@keyframes walker {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 0 -3744px; } }
