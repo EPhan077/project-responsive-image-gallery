@@ -1,0 +1,169 @@
+// Base
+
+/*** Structure ***/
+#hideMe {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#showMe {
+    display:  none;
+}
+
+html
+{
+    font-size: 63%;
+}
+
+body
+{
+    font: $primary-font-stack;
+    padding: 0 10%;
+}
+
+header
+{
+    margin: 3rem 0;
+    text-align: center;
+
+    #globe
+    {
+        transition: all 1s ease-in-out;
+    }
+    .transform 
+    {
+        transform: rotate(360deg);
+    }
+}
+
+main
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+
+    article
+    {
+        position: relative;
+        overflow: hidden;
+
+        &:hover ul
+        {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        ul
+        {
+            opacity: 0;
+            list-style-type: none;
+            list-style-image: url("../images/user-icon.svg");
+            list-style-position: inside;
+            display: block;
+            position: absolute;
+            bottom: 0.7rem;
+            padding: 2rem;
+            background-color: rgba(0,0,0,.75);
+            letter-spacing: .05rem;
+            color: white;
+            width: 100%;
+            transition: all 0.25s ease-out;
+            transform: translateY(30px);
+            
+            li {
+                font-size: 2rem;
+                letter-spacing: 0.08rem;
+                opacity: 0.8;
+            }
+
+            li:last-of-type
+            {
+                margin-top: .5rem;
+                list-style-image: none;
+                padding-left: 2.6rem;
+                background: url("../images/heart.svg") left center no-repeat;
+                font-size: 1.4rem;
+            }
+        }
+
+        img
+        {
+            margin: 0 auto;
+            width: 100%;
+            object-fit: cover;
+            height: 300px;
+        }
+    }
+}
+
+article:last-of-type {
+    display: none;
+}
+
+#author
+{
+    display: inline;
+    padding: 2px;
+}
+
+@include mobile
+{
+    main 
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include tablet 
+{
+    main 
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+footer {
+    margin: 14rem auto 2rem auto;
+    text-align: center;
+}
+
+
+/*** Typography ***/
+
+#quote,
+#author {
+    color: $secondary-color;
+}
+
+p:last-of-type {
+    
+    color: $primary-color;
+}
+
+a {
+    text-decoration: none;
+    color: $secondary-color;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    color: $primary-color;
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: .25rem;
+}
+
+#enter {
+    transition: color 1s;
+}
+
+#enter:hover {
+    color:red;
+}
