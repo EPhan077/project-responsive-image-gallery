@@ -92,8 +92,7 @@ let quoteArray = [{
 function randomQuote()
 {
     const random = Math.floor(Math.random()*quoteArray.length);
-    quote.innerHTML = quoteArray[random].quote;
-    author.innerHTML = `&mdash; ${quoteArray[random].author}`;
+    quote.innerHTML = ` "${quoteArray[random].quote}"<span> &mdash; ${quoteArray[random].author}</span>`;
 }
 
 // To enter main page

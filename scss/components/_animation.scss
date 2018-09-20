@@ -1,0 +1,25 @@
+/*** Animation ***/
+
+.sprite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	width: 200px;
+	height:240px;
+	background:transparent url('../images/zombie_frame.png') 0 0 no-repeat;
+	animation: walker 2s steps(16) infinite;
+    animation-play-state: paused;
+    transition: color 2s;
+}
+
+.sprite:hover {
+    animation-play-state: running;
+    color: red;
+}
+
+
+@keyframes walker {
+	0% {background-position: 0 0;}
+	100% {background-position: 0 -3744px;}
+}
