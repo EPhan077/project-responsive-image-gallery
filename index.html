@@ -5,16 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Zombies Image Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel ="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.typekit.net/hqn1paj.css">
 </head>
 <body>
+    <div id="hideMe">
+        <div class="sprite" id="zombie"></div>
+        <h1 id="enter">Enter...</h1>
+    </div>
+    <div id="showMe">
     <header>
         <nav>
-            <div class="sprite"></div>
+            <a href="index.html"><img id="globe" src="images/globe.svg" alt="This is a Globe icon"></a>
         </nav>
         <h1>Zombies</h1>
         <p id="quote"><q>Waiting for that Zombie Apocalypse!</q></p>
-        <p id="author">&mdash; -Unknown</p>
+        <p id="author">&mdash; Unknown</p>
     </header>
     <main id="images">
 
@@ -22,6 +30,7 @@
     <footer>
         <p>Images courtesy of <a href="https://www.unsplash.com">Unsplash</a></p>
     </footer>
-    <script src="js/main.js"></script>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 </html>
